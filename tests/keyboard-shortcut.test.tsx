@@ -25,6 +25,21 @@ test('KeyboardShortcut fires correctly', async () => {
   expect(handler).toHaveBeenCalledTimes(1);
 });
 
+test('KeyboardShortcut handles single keys', async () => {
+  const handler = jest.fn();
+  render(<KeyboardShortcut combination="esc" onKeyDown={handler} />);
+
+  const escapeKeyEvent = {
+    which: 27, // code for "Esc"
+  };
+
+  expect(handler).toHaveBeenCalledTimes(0); // should not have been called yet
+
+  fireEvent.keyDown(document, escapeKeyEvent);
+  expect(handler).toHaveBeenCalled();
+  expect(handler).toHaveBeenCalledTimes(1);
+});
+
 test('KeyboardShortcut removes listeners when unmounted', async () => {
   const handler = jest.fn();
   const { unmount } = render(
@@ -39,7 +54,7 @@ test('KeyboardShortcut removes listeners when unmounted', async () => {
   fireEvent.keyDown(document, shiftWEvent);
   expect(handler).toHaveBeenCalledTimes(2);
 
-  unmount()
+  unmount();
   fireEvent.keyDown(document, shiftWEvent);
   expect(handler).toHaveBeenCalledTimes(2);
 });
