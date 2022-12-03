@@ -1,6 +1,7 @@
 # KeyboardShortcut Component
 
-[![GitHub](https://img.shields.io/github/license/everdimension/keyboard-shortcut)](LICENSE)
+[![tests](https://github.com/everdimension/keyboard-shortcut-component/actions/workflows/node.js.yml/badge.svg)](https://github.com/everdimension/keyboard-shortcut-component/actions)
+[![GitHub](https://img.shields.io/github/license/everdimension/keyboard-shortcut?color=brightgreen)](LICENSE)
 
 A handy React component that listens for keyboard combintaions (hotkeys) when mounted.
 
