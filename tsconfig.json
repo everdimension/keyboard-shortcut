@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strict": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "pretty": true,
+    "lib": ["esnext", "dom"]
+  }
+}
+
