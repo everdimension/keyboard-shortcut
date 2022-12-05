@@ -1,6 +1,6 @@
 {
   "name": "keyboard-shortcut-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component that fires a callback when a hotkey combination is pressed",
   "type": "module",
   "source": "src/index.tsx",
