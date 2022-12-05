@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { isHotkey } from 'is-hotkey';
 
-interface Props {
+export interface KeyboardShortcutProps {
   combination: string;
   onKeyDown: (event: KeyboardEvent, combination: string) => void;
   disabled?: boolean;
@@ -13,7 +13,7 @@ export function KeyboardShortcut({
   combination,
   onKeyDown,
   disabled = false,
-}: Props) {
+}: KeyboardShortcutProps) {
   const handler = useRef(onKeyDown);
   useEffect(() => {
     handler.current = onKeyDown;
